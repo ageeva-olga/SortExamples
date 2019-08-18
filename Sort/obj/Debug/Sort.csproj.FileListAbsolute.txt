@@ -5,3 +5,9 @@ C:\Users\Twilight Sparkle\source\repos\Sort\Sort\obj\Debug\Sort.csprojAssemblyRe
 C:\Users\Twilight Sparkle\source\repos\Sort\Sort\obj\Debug\Sort.csproj.CoreCompileInputs.cache
 C:\Users\Twilight Sparkle\source\repos\Sort\Sort\obj\Debug\Sort.exe
 C:\Users\Twilight Sparkle\source\repos\Sort\Sort\obj\Debug\Sort.pdb
+C:\Users\Twilight Sparkle\source\repos\SortExamples\Sort\bin\Debug\Sort.exe.config
+C:\Users\Twilight Sparkle\source\repos\SortExamples\Sort\bin\Debug\Sort.exe
+C:\Users\Twilight Sparkle\source\repos\SortExamples\Sort\bin\Debug\Sort.pdb
+C:\Users\Twilight Sparkle\source\repos\SortExamples\Sort\obj\Debug\Sort.csproj.CoreCompileInputs.cache
+C:\Users\Twilight Sparkle\source\repos\SortExamples\Sort\obj\Debug\Sort.exe
+C:\Users\Twilight Sparkle\source\repos\SortExamples\Sort\obj\Debug\Sort.pdb

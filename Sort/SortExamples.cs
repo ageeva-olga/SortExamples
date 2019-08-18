@@ -26,47 +26,12 @@ namespace Sort
             }
             return array;
         }
-        public int[] BubbleSort(int[] source, bool orderAsc)
-        {
-            int[] array = new int[source.Length];
-            for(int i=0; i<source.Length; i++)
-            {
-                array[i] = source[i];
-            }
-            for (int j = 1; j < array.Length; j++)
-            {
-                for (int i = 1; i < array.Length; i++)
-                {
-                    if (orderAsc == true)
-                    {
-                        if (array[i] < array[i - 1])
-                        {
-                            Swap(array, i);
-                        }
-                    }
-                    else
-                    {
-                        if (array[i] > array[i - 1])
-                        {
-                            Swap(array, i);
-                        }
-                    }
-                }
-            }
-            return array;
-        }
-        private void Swap(int[] source, int index)
-        {
-            int elem = source[index - 1];
-            source[index - 1] = source[index];
-            source[index] = elem;
-        }
         public SortingResult SortingTime(int[] source, bool orderAsc)
         {
             var timeBefore = DateTime.Now;
-            var array = BubbleSort(source, orderAsc);
+           // var array = BubbleSort(source, orderAsc);
             var timeAfter = DateTime.Now;
-            return new SortingResult((timeAfter - timeBefore).Milliseconds, array);
+            return new SortingResult((timeAfter - timeBefore).Milliseconds, source);
         }
         public void Print(SortingResult result)
         {
