@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    public class QuickSort
+    public class QuickSort : ISort
     {
         public int[] Sort(int[] source)
         {

@@ -45,5 +45,31 @@ namespace SortTest
             Assert.AreEqual(result[2], 3);
             Assert.AreEqual(result[3], 2);
         }
+        [TestMethod]
+        public void TestMethod5()
+        {
+            var ar1 = new int[7] { 1, 0, 3, 4, 6, 5, 2 };
+            var result = new MaxMinSort().Sort(ar1);
+            for (int i = 0; i < 7; i++)
+                Assert.AreEqual(result[i], i);
+        }
+        [TestMethod]
+        public void TestMethod6()
+        {
+            var ar1 = new int[7] { 1, 0, 3, 4, 6, 5, 2 };
+            var result = new BubbleSort().Sort(ar1);
+            for (int i = 0; i < 7; i++)
+                Assert.AreEqual(result[i], i);
+        }
+        [TestMethod]
+        public void CopyTest()
+        {
+            var ar = new int[5] { 1, 3, 4, 2, 0 };
+            var result = SortExamples.Copy(ar);
+            for (int i = 0; i < 5; i++)
+            {
+                Assert.AreEqual(result[i], ar[i]);
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    class SortingResult
+    public class SortingResult
     {
         public int Time;
         public int[] Array;

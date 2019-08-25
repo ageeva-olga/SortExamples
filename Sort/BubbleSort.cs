@@ -6,36 +6,32 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    class BubbleSort
+    public  class BubbleSort : ISort
     {
-        public int[] Sort(int[] source, bool orderAsc)
+        public int[] Sort(int[] source)
         {
-            int[] array = new int[source.Length];
-            for (int i = 0; i < source.Length; i++)
+            bool orderAsc = true;
+            for (int j = 1; j < source.Length; j++)
             {
-                array[i] = source[i];
-            }
-            for (int j = 1; j < array.Length; j++)
-            {
-                for (int i = 1; i < array.Length; i++)
+                for (int i = 1; i < source.Length; i++)
                 {
                     if (orderAsc == true)
                     {
-                        if (array[i] < array[i - 1])
+                        if (source[i] < source[i - 1])
                         {
-                            Swap(array, i);
+                            Swap(source, i);
                         }
                     }
                     else
                     {
-                        if (array[i] > array[i - 1])
+                        if (source[i] > source[i - 1])
                         {
-                            Swap(array, i);
+                            Swap(source, i);
                         }
                     }
                 }
             }
-            return array;
+            return source;
         }
         private void Swap(int[] source, int index)
         {

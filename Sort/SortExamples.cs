@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    class SortExamples
+    public class SortExamples
     {
        public int[] RandomArrayGenerator(int size)
         {
@@ -26,12 +26,41 @@ namespace Sort
             }
             return array;
         }
-        public SortingResult SortingTime(int[] source, bool orderAsc)
+        public static int[] Copy(int[] source)
+        {
+            int[] array = new int[source.Length];
+            for (int i = 0; i < source.Length; i++)
+            {
+                array[i] = source[i];
+            }
+            return array;
+        }
+        public void SortBenchmark()
+        {
+            var sortEx = new SortExamples();
+            var source = sortEx.RandomArrayGenerator(5000);
+            var sortAlgs = new ISort[] { new BubbleSort(), new MaxMinSort(), new QuickSort() };
+            foreach(var sort in sortAlgs)
+                RunSorting(sort, source);
+        }
+        private void RunSorting(ISort sort, int[] source)
+        {
+            var array = SortExamples.Copy(source);
+            var sortEx = new SortExamples();
+            var sortingResult = sortEx.SortingTime(sort, array);
+            sortEx.PrintLn(sortingResult);
+        }
+        public SortingResult SortingTime(ISort sort, int[] source)
         {
             var timeBefore = DateTime.Now;
-           // var array = BubbleSort(source, orderAsc);
+            var array = sort.Sort(source);
             var timeAfter = DateTime.Now;
-            return new SortingResult((timeAfter - timeBefore).Milliseconds, source);
+            return new SortingResult((timeAfter - timeBefore).Milliseconds, array);
+        }
+        public void PrintLn(SortingResult result)
+        {
+            Print(result);
+            Console.WriteLine("");
         }
         public void Print(SortingResult result)
         {

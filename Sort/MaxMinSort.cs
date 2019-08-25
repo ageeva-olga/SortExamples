@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    class MaxMinSort
+    public class MaxMinSort : ISort
     {
-        public int[] MinSort(int[] source)
+        public int[] Sort(int[] source)
         {
             int min = source.Length;
             int index = 0;

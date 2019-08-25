@@ -10,11 +10,8 @@ namespace Sort
     {
         static void Main(string[] args)
         {
-            var sortEx = new SortExamples();
-            var array = sortEx.RandomArrayGenerator(50000);
-            //var sorted = sortEx.BubbleSort(array, false);
-            var sortingResult = sortEx.SortingTime(array, true);
-            sortEx.Print(sortingResult);
+            var sortExamples = new SortExamples();
+            sortExamples.SortBenchmark();
             Console.ReadKey();
         }
     }
